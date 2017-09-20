@@ -40,47 +40,52 @@
 
     <link rel="stylesheet" type="text/css" href="css/index.css" />
     <title>WORD GAME</title>
-</head>
-<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="js/wordgame.js"></script>
+	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
 <script>
+var turn;
+var score;
 var flag=0;
-$(document).ready(function (){
- $("#inst_but").click( function (){
-     
-	  if(flag==0)
-	 {
-		$("#instruction").slideDown();
-	   $("#instruction").css("display","block");
-	   flag=1;
-	 }
-	 else
-	  {
-	  
-	   
-	   $("#instruction").slideUp();
-	   flag=0;
-	  }
-	});
+var index,x;
+var words=["clinic","render","yummy","xerox","toilet","typist","twist","civic","trust","teapot","throat","erase","cardiac","comic","treat"];
+ 
+$(document).ready(function(){
+    intial();
+    
+	$("#check").click(function (){
+		check();
+		});	
+	$("#next").click(function (){
+		nextword();
+		});	
+	$("#restart").click(function (){
+		location.reload();
+		});	
+	$("#suf").focusout(function (){
+		temp=$("#suf").val();
+		$("#pref").val(temp);
+		});
 });
 </script>
+</head>
+
 <body>
-	<br><br>
     
-	
         <div id="div1">
 	<h1 id="heading"><b>GUESS THE WORD GAME<b></h1><br><br>
-	<a href="game.html"><button id="start_but">START</button></a>
-		<button id="inst_but">GUIDE</button>
-	
-	<div id="instruction" style="display:none">
-		<ul id="inst">
-			<li>The User has to choose a character and complete the word, but prefixing and suffixing the word withthe same character.</li>
-			<li>He is given three choices to find the word.</li>
-			<li>If he finds the word then he is given a score according to no. of attempts left </li>
-			<li>And is given another word to find, until all the words aren't guessed coorectly</li>
-			<li>Once the user is failed to guess the word within the 3 chances the Game is over, however the game can be restarted</li>
-		</ul>
-	</div>
+	<form>
+			<input type="text" placeholder="Guess Suffix" id="suf"><br><br>
+			<input type="text" id="word" ><br><br>
+			<input type="text" placeholder="Guess Preffix" id="pref">
+			<br><br>			
+	</form>
+	<button id="check">Check</button>
+	<button id="next">Next</button>
+	<button id="restart">Restart</button><br><br>
+		
+	<p id="score"> Score is : </p>
+		<p id="res"></p>
+		<p id="comp"></p>
 	</div>
     
     <script type="text/javascript" src="cordova.js"></script>

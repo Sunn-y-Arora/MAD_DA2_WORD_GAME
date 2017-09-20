@@ -24,8 +24,8 @@ body {
     -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
     -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
     -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
-    background-color:#E4E4E4;
-    background-image:linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
+   
+    /*background-image:linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
     background-image:-webkit-linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
     background-image:-ms-linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
     background-image:-webkit-gradient(
@@ -34,7 +34,9 @@ body {
         left bottom,
         color-stop(0, #A7A7A7),
         color-stop(0.51, #E4E4E4)
-    );
+    );*/
+	background-image: url("../img/6143.jpg");
+	background-color:#E4E4E4;
     background-attachment:fixed;
     font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
     font-size:12px;
@@ -123,11 +125,17 @@ h1 {
 		left:10%;
 		top:20%;
 		padding: 8px;
+		background-image: url("../img/bg.jpg");
 		background-color:#7AEBFB	;
 }
-#score,#res,#comp{
+#score,#res{
 	font-size:20px;	
-	color:#FC012B;
+	color:#201C25;
+}
+#comp{
+	font-size:20px;	
+	color:#17C144;
+
 }
 h1{
 	text-align:center;
@@ -160,7 +168,16 @@ button {
   
   cursor:pointer;
 }
-
+#inst{
+	font-size:15px;
+	color:#0f1a30;
+	font-family:Calibri;
+}
+#heading{
+	font-size:35px;
+	font-family:Calibri;
+	color:#47675e ;
+}
 button:hover {
   background: #faf73c;
   background-image: -webkit-linear-gradient(top, #faf73c, #3498db);

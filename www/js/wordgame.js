@@ -29,7 +29,8 @@ function intial()
 	
  }
  function nextword(){
-  words.splice(index,index+1);
+  words.splice(index,1);
+ 
   if(words.length==0)
   {
 	$("#comp").text("Congratulations, you have completed the Game !"); 
@@ -40,6 +41,7 @@ function intial()
  }
 function check()
 { 
+ 
 	 if(turn!=0)
 	{	suffix=$("#suf").val();
 		suffix=suffix.toLowerCase();
